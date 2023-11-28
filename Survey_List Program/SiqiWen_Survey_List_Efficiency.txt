@@ -1,0 +1,20 @@
+Efficiency Review Write-up
+Siqi Wen   CS163    Program1
+
+
+This is an App Survey program. In this program, the user will be able to add new applications; display information of all applications; insert survey information for a given app; display usage for application of a particular category; remove an application by the name.
+
+In this program, I created two classes and three structures:
+One class called app_info to manage the information for an app, and it includes three private data members: a pointer for the app name, a pointer for the app type, and another pointer for the app description.
+Another class deals with the list of apps, it includes one private data member which is a pointer points to the first node of the app list.
+One structure deals with the usage information; one structure deals with the node of usage; and one deals with the node of app which includes a head pointer points to the first node of the list of usage.
+
+In my opinion, the data structure I selected performed well for the assigned application. My program was is able to complete all missions that the application wants to complete.
+
+I think a different data structure would work better. Specifically, a linear linked list of array would work better in this case. Because the data structure I used in my program, a linear linked list of a linear linked list, would cost a lot of memory overhead. However, with using a linear linked list of array, there would be less memory used because we wouldn’t have a next pointer for each node for one of the linear linked list, also, we wouldn’t need to do as much traversing as we need to with two linear linked list.
+
+As for what was efficient about my design and use of the data structure, with using linear linked lists, I, as a programmer, I don’t need to decide how big I want the storage to be for storing information the user might enter in. If I used a statically allocated array for the data, I’ll have to decide how big I want the size of the array to be before anybody uses my program which doesn’t sound flexible at all. If I use dynamically allocated arrays, I, as a programmer, wouldn’t need to decide how big I want the size of the array to be. However, the user whoever uses my program will need to decide how big they want for the size of arrays to store information, which also sounds ridiculous. 
+
+As for what was not efficient about my design and use of the data structure, with using two linear linked list, there can be a lot of memory overhead. Because each node has an address of another node, this is going to use a lot of memories which can be very expensive. Moreover, with two linear linked lists being involved, every time, we need to do some operation with the data, we need to do a lot of traversing work, which doesn’t seem very efficient. As it’s shown in my program, majority of functions involved a lot of steps of traversing. 
+
+If I had more time to solve the problem, I would change my data structure, from two linear linked lists to a linear linked list of array. In this way, the list can grow and shrink as a linear linked list is very flexible with adjusting the size, also, there wouldn’t be that much traversing involved as it was with two linear linked lists, because with using arrays, we can have direct access to an item we want with using the subscript operator. Moreover, I would change some of my member functions so that they will be dealing with the data recursively instead of iteratively. 
